@@ -34,3 +34,9 @@ const keypos_t hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
 };
 #endif
 
+bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
+	// put your per-action keyboard code here
+	// runs for every action, just before processing by the firmware
+
+	return process_record_user(keycode, record);
+}
